@@ -13,7 +13,7 @@ from ghidra.app.util import XReferenceUtil
 asm = Assemblers.getAssembler(currentProgram)
 xref = XReferenceUtil()
 
-def patch_many_bytes(frm, opcode="NOP"):
+def patch_many_bytes(frm, opcode="\x90"):
     addr, size = None, 0
     if isinstance(frm, InstructionDB):
         addr = frm.getAddress()
@@ -22,13 +22,15 @@ def patch_many_bytes(frm, opcode="NOP"):
         addr = frm
         size = getInstructionAt(addr).getLength()
     else:
-        print "[-] wrong param...{0}".format(type(frm))
+        println("[-] wrong param...{0}".format(type(frm)))
         return
 
     # assemble call is way tooo slow...
     # for i in xrange(size):
     #     asm.assemble(addr.add(i), opcode)
-    asm.patchProgram("\x90"*size, addr)
+    asm.patchProgram(opcode*size, addr)
+    for i in xrange(size):
+        disassemble(addr.add(i))
 
 class CFGXrefs(object):
     """
@@ -65,7 +67,7 @@ class CFGXrefs(object):
 
             inst = getInstructionAt(the_addr)
             if not inst:
-                print "[-] failed to get inst...{0} {1}".format(the_addr, frm_inst.getAddress())
+                println("[-] failed to get inst...{0} {1}".format(the_addr, frm_inst.getAddress()))
                 break
 
             tsni = str(inst).lower()
@@ -104,11 +106,11 @@ class CFGXrefs(object):
 
         mov_ecx_inst = self.find(getInstructionAt(addr), pattern1="mov ecx,", fwd_p=False)
         if not mov_ecx_inst:
-            print "[-] failed to find ecx setting opcodes ... {0}".format(addr)
+            println("[-] failed to find ecx setting opcodes ... {0}".format(addr))
 
         mov_esp_inst = self.find(getInstructionAt(addr), "mov ", ",esp", fwd_p=False)
         if not mov_esp_inst:
-            print "[-] failed to find esp setting opcodes ... {0}".format(addr)
+            println("[-] failed to find esp setting opcodes ... {0}".format(addr))
 
         # following instructions could be patched due to compiler optimizations...
         cmp_esp_inst = self.find(getInstructionAt(addr), "cmp ", ",esp")
@@ -127,17 +129,17 @@ class CFGXrefs(object):
                 elif str(j_inst).startswith("JZ"):
                     self.append(j_inst)
                 else:
-                    print "[-] still not jz/jnz ... {0}".format(j_inst.getAddress())
+                    println("[-] still not jz/jnz ... {0}".format(j_inst.getAddress()))
             else:
-                print "[-] not jz/jnz ... {0}".format(j_inst.getAddress())
+                println("[-] not jz/jnz ... {0}".format(j_inst.getAddress()))
 
             mov_ecx_4_inst = self.find(j_inst, pattern1="mov ecx,0x4")
             if not mov_ecx_4_inst:
-                print "[-] can't find mov ecx, 0x4 ... maybe optimized {0}".format(j_inst.getAddress())
+                println("[-] can't find mov ecx, 0x4 ... maybe optimized {0}".format(j_inst.getAddress()))
 
             int_29_inst = self.find(j_inst, pattern1="int 29")
             if not int_29_inst:
-                print "[-] can't find int 29 ... maybe optimized {0}".format(j_inst.getAddress())
+                println("[-] can't find int 29 ... maybe optimized {0}".format(j_inst.getAddress()))
 
 
 x = CFGXrefs()
@@ -148,12 +150,12 @@ if currentSelection:
         x.collect_xrefs(addr.getMinAddress())
         ctn += 1
         if (ctn % 100 == 0):
-            print "[+] done...{0}".format(ctn)
-    print "[+] total...{0}".format(ctn)
+            println("[+] done...{0}".format(ctn))
+    println("[+] total...{0}".format(ctn))
 else:
     x.collect_xrefs(currentAddress)
 
 for xref in x.xrefs:
     patch_many_bytes(xref)
 
-print "[+] done ... {0} blocks".format(len(x.xrefs))
+println("[+] done ... {0} blocks".format(len(x.xrefs)))
