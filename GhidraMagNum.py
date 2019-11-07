@@ -20,7 +20,7 @@ data['q'] = ''
 
 operand = state.getCurrentLocation().operandRepresentation
 if not operand.startswith('0x'):
-    print '[-] not a hex value'
+    println('[-] not a hex value')
     exit
 
 data['q'] = operand
@@ -32,13 +32,13 @@ try:
     ser = json.loads(res.read())
     if ser.has_key("Items") and len(ser["Items"]) >= 1:
         title = ser["Items"][0]["Title"]
-        print(title)
-        print(ser["Items"][0]["DisplayFilePath"])
+        println(title)
+        println(ser["Items"][0]["DisplayFilePath"])
         # enum = ghidra.program.model.data.EnumDataType('magnum_' + title, 4)
         # enum.add(title, int(operand, 16))
         # currentProgram.getDataTypeManager().addDataType(enum, ghidra.program.model.data.DataTypeConflictHandler.DEFAULT_HANDLER)
         # ghidra.program.database.symbol.EquateManager.createEquate(title, int(operand, 16))
     else:
-        print('[-] failed to query...')
+        println('[-] failed to query...')
 except urllib2.HTTPError as e:
-    print('[-] failed to query, ' + e.reason)
+    println('[-] failed to query, ' + e.reason)
