@@ -1,9 +1,9 @@
 //Headless post-script to export as BinExport file
 //@author binjo
 //@category User
-//@keybinding 
-//@menupath 
-//@toolbar 
+//@keybinding
+//@menupath
+//@toolbar
 
 import ghidra.app.script.GhidraScript;
 import com.google.security.binexport.BinExportExporter;
