@@ -25,9 +25,12 @@ else
     headless_params="${headless_params} ${prj_path}"
 fi
 
+# default post handling __guard_dispatch_icall_fptr
+headless_params="${headless_params} -scriptPath ${MY_SCRIPT_PATH} -postScript HeadlessPostReplaceCFGDispatchCall.java"
+
 if [ -d "${prj_path}/pdb" ]
 then
-    headless_params="${headless_params} -scriptPath ${MY_SCRIPT_PATH} -preScript HeadlessPreSetPath.java ${prj_path}/pdb -postScript HeadlessPostBinExport.java ${prj_path}/export"
+    headless_params="${headless_params} -preScript HeadlessPreSetPath.java ${prj_path}/pdb -postScript HeadlessPostBinExport.java ${prj_path}/export"
 fi
 
 ${GHIDRA_PATH}/support/analyzeHeadless ${headless_params}
