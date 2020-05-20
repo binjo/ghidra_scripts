@@ -23,6 +23,7 @@ public class HeadlessPostBinExport extends GhidraScript {
             if (!outputDir.exists()) outputDir.mkdir();
             // let's export
             File outputFile = new File(args[0], fbe);
+            if (outputFile.isFile()) outputFile.delete();
             BinExportExporter binexport = new BinExportExporter();
             binexport.export(outputFile, currentProgram, null, monitor);
         }
