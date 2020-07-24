@@ -2,7 +2,13 @@
 
 #script to automatically import and export of a binary with ghidra
 
-GHIDRA_PATH=$(dirname $(readlink `which ghidraRun`))
+if [ -d ~/repos/ghidra/build/dist/ghidra_9.2_DEV ]
+then
+    GHIDRA_PATH=~/repos/ghidra/build/dist/ghidra_9.2_DEV
+else
+    GHIDRA_PATH=$(dirname $(readlink `which ghidraRun`))
+fi
+
 MY_SCRIPT_PATH=$(dirname "$0")
 # TODO auto create project primary directory within script path?
 MY_GHIDRA_PRJ=~/Documents/ghidra_prj
