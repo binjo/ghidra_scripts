@@ -1,42 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TOOL_CONFIG CONFIG_NAME="NO_LONGER_USED">
-    <SUPPORTED_DATA_TYPE CLASS_NAME="ghidra.program.model.listing.DataTypeArchive" />
     <SUPPORTED_DATA_TYPE CLASS_NAME="ghidra.program.model.listing.Program" />
+    <SUPPORTED_DATA_TYPE CLASS_NAME="ghidra.program.model.listing.DataTypeArchive" />
     <ICON LOCATION="red-dragon.gif" />
     <TOOL TOOL_NAME="MyCodeBrowser" INSTANCE_NAME="">
         <OPTIONS>
             <CATEGORY NAME="Listing Fields">
                 <STATE NAME="Function Signature Field.Display Namespace" TYPE="boolean" VALUE="true" />
                 <STATE NAME="Pcode Field.Maximum Lines To Display" TYPE="int" VALUE="50" />
-                <ENUM NAME="Field Name.Array Index Format" TYPE="enum" CLASS="ghidra.app.util.viewer.field.FieldNameFieldFactory$IndexFormat" VALUE="hex" />
                 <STATE NAME="Operands Field.Markup Register Variable References" TYPE="boolean" VALUE="false" />
                 <ENUM NAME="Cursor Text Highlight.Mouse Button To Activate" TYPE="enum" CLASS="ghidra.GhidraOptions$CURSOR_MOUSE_BUTTON_NAMES" VALUE="LEFT" />
                 <STATE NAME="Operands Field.Add Space After Separator" TYPE="boolean" VALUE="true" />
+                <WRAPPED_OPTION NAME="Cursor Text Highlight.Highlight Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-13157567" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Cursor Text Highlight.Scoped Write Highlight Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-13157567" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Cursor Text Highlight.Scoped Read Highlight Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-13157567" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Selection Colors.Selection Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-11118501" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Selection Colors.Difference Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-11118501" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Selection Colors.Highlight Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-11118501" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Cursor.Cursor Color - Focused" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-3815226" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Cursor.Cursor Color - Unfocused" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-13157567" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Cursor.Highlight Cursor Line Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-13157567" />
+                </WRAPPED_OPTION>
             </CATEGORY>
             <CATEGORY NAME="Key Bindings">
+                <WRAPPED_OPTION NAME="Listing (Shared)" CLASS="ghidra.framework.options.WrappedKeyStroke">
+                    <STATE NAME="KeyCode" TYPE="int" VALUE="76" />
+                    <STATE NAME="Modifiers" TYPE="int" VALUE="130" />
+                </WRAPPED_OPTION>
                 <WRAPPED_OPTION NAME="Rename Data Field (DataPlugin)" CLASS="ghidra.framework.options.WrappedKeyStroke">
                     <STATE NAME="KeyCode" TYPE="int" VALUE="76" />
                     <STATE NAME="Modifiers" TYPE="int" VALUE="0" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Functions Window (Shared)" CLASS="ghidra.framework.options.WrappedKeyStroke">
+                    <STATE NAME="KeyCode" TYPE="int" VALUE="70" />
+                    <STATE NAME="Modifiers" TYPE="int" VALUE="130" />
                 </WRAPPED_OPTION>
                 <WRAPPED_OPTION NAME="Edit Options (Tool)" CLASS="ghidra.framework.options.WrappedKeyStroke">
                     <STATE NAME="KeyCode" TYPE="int" VALUE="48" />
                     <STATE NAME="Modifiers" TYPE="int" VALUE="260" />
                 </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Defined Strings (Shared)" CLASS="ghidra.framework.options.WrappedKeyStroke">
+                    <STATE NAME="KeyCode" TYPE="int" VALUE="83" />
+                    <STATE NAME="Modifiers" TYPE="int" VALUE="130" />
+                </WRAPPED_OPTION>
                 <WRAPPED_OPTION NAME="Edit Function Signature (DecompilePlugin)" CLASS="ghidra.framework.options.WrappedKeyStroke">
                     <STATE NAME="KeyCode" TYPE="int" VALUE="89" />
                     <STATE NAME="Modifiers" TYPE="int" VALUE="0" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Decompiler (Shared)" CLASS="ghidra.framework.options.WrappedKeyStroke">
+                    <STATE NAME="KeyCode" TYPE="int" VALUE="69" />
+                    <STATE NAME="Modifiers" TYPE="int" VALUE="130" />
                 </WRAPPED_OPTION>
             </CATEGORY>
             <CATEGORY NAME="Decompiler">
                 <STATE NAME="Display.Number of characters per indent level" TYPE="int" VALUE="4" />
                 <STATE NAME="Display.Print 'NULL' for null pointers" TYPE="boolean" VALUE="true" />
                 <STATE NAME="Analysis.Respect readonly flags" TYPE="boolean" VALUE="false" />
-                <STATE NAME="Display.Display Namespaces" TYPE="boolean" VALUE="true" />
                 <STATE NAME="Analysis.Eliminate unreachable code" TYPE="boolean" VALUE="false" />
+                <WRAPPED_OPTION NAME="Display.Color for Keywords" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-2190497" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Display.Background Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-14144978" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Display.Color for Parameters" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-8034417" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Display.Color for Constants" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-5946814" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Display.Color for Current Variable Highlight" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-13157567" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Display.Color Default" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-3815226" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Display.Color for Types" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-7564224" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Display.Color for Variables" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-3815226" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Display.Color for Comments" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-10518115" />
+                </WRAPPED_OPTION>
                 <WRAPPED_OPTION NAME="Display.Font" CLASS="ghidra.framework.options.WrappedFont">
                     <STATE NAME="size" TYPE="int" VALUE="14" />
                     <STATE NAME="style" TYPE="int" VALUE="0" />
                     <STATE NAME="family" TYPE="string" VALUE="Source Code Pro" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Display.Color for Function names" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-10580601" />
                 </WRAPPED_OPTION>
             </CATEGORY>
             <CATEGORY NAME="Comments">
@@ -53,6 +124,11 @@
                 <STATE NAME="Union Editor.Show Numbers In Hex" TYPE="boolean" VALUE="true" />
                 <STATE NAME="Structure Editor.Show Numbers In Hex" TYPE="boolean" VALUE="true" />
             </CATEGORY>
+            <CATEGORY NAME="Search">
+                <WRAPPED_OPTION NAME="Highlight Color for Current Match" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-11974594" />
+                </WRAPPED_OPTION>
+            </CATEGORY>
             <CATEGORY NAME="Console">
                 <WRAPPED_OPTION NAME="Font" CLASS="ghidra.framework.options.WrappedFont">
                     <STATE NAME="size" TYPE="int" VALUE="14" />
@@ -61,10 +137,118 @@
                 </WRAPPED_OPTION>
             </CATEGORY>
             <CATEGORY NAME="Listing Display">
+                <WRAPPED_OPTION NAME="Background Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-14144978" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Mnemonic Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-3815226" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Bad Reference Address Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-5946814" />
+                </WRAPPED_OPTION>
                 <WRAPPED_OPTION NAME="BASE FONT" CLASS="ghidra.framework.options.WrappedFont">
                     <STATE NAME="size" TYPE="int" VALUE="14" />
                     <STATE NAME="style" TYPE="int" VALUE="0" />
                     <STATE NAME="family" TYPE="string" VALUE="Source Code Pro" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="XRef Write Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-2190497" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Address Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-10066330" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Function Parameters Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-3815226" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Function Return Type Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-3815226" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Comment, Referenced Repeatable Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-10518115" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Constant Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-5946814" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="XRef Other Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-3815226" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="EOL Comment Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-10518115" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Labels, Primary Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-10518115" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Function Tag Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-8034417" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Bytes Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-8281410" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Post-Comment Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-10518115" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Function Call-Fixup Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-5073733" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Plate Comment Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-10518115" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Labels, Unreferenced Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-3815226" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Entry Point Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-3815226" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Pre-Comment Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-10518115" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Mnemonic, Override Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-3815226" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="External Reference, Resolved Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-10580601" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Parameter, Dynamic Storage Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-10580601" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Parameter, Custom Storage Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-8034417" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Underline Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-5073733" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Field Name Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-3815226" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="XRef Read Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-10518115" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Separator Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-3815226" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Version Track Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-5073733" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Comment, Automatic Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-10518115" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="XRef Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-7564224" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Variable Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-8034417" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Flow Arrow, Active Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-3815226" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Labels, Local Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-7564224" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Function Name Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-10580601" />
+                </WRAPPED_OPTION>
+                <WRAPPED_OPTION NAME="Comment, Repeatable Color" CLASS="ghidra.framework.options.WrappedColor">
+                    <STATE NAME="color" TYPE="int" VALUE="-10518115" />
                 </WRAPPED_OPTION>
             </CATEGORY>
         </OPTIONS>
@@ -72,75 +256,8 @@
             <INCLUDE CLASS="ghidra.app.plugin.core.editor.TextEditorManagerPlugin" />
             <INCLUDE CLASS="ghidra.app.plugin.core.interpreter.InterpreterPanelPlugin" />
         </PACKAGE>
-        <PLUGIN_STATE CLASS="ghidra.app.plugin.core.symboltree.SymbolTreePlugin">
-            <STATE NAME="GO_TO_TOGGLE_STATE" TYPE="boolean" VALUE="false" />
-        </PLUGIN_STATE>
-        <PLUGIN_STATE CLASS="ghidra.app.plugin.core.functiongraph.FunctionGraphPlugin">
-            <XML NAME="USER_DEFINED_FORMAT_MANAGER">
-                <SAVE_STATE>
-                    <XML NAME="Array">
-                        <FORMAT>
-                            <ROW>
-                                <FIELD NAME="Address" WIDTH="50" ENABLED="true" />
-                            </ROW>
-                        </FORMAT>
-                    </XML>
-                    <XML NAME="Function">
-                        <FORMAT>
-                            <ROW>
-                                <FIELD NAME="Function Signature" WIDTH="410" ENABLED="true" />
-                            </ROW>
-                        </FORMAT>
-                    </XML>
-                    <XML NAME="Variable">
-                        <FORMAT>
-                            <ROW>
-                                <FIELD WIDTH="50" ENABLED="true" />
-                                <FIELD NAME="Variable Type" WIDTH="110" ENABLED="true" />
-                                <FIELD NAME="Variable Location" WIDTH="120" ENABLED="true" />
-                                <FIELD NAME="Variable Name" WIDTH="280" ENABLED="true" />
-                            </ROW>
-                        </FORMAT>
-                    </XML>
-                    <XML NAME="Address Break">
-                        <FORMAT>
-                            <ROW />
-                        </FORMAT>
-                    </XML>
-                    <XML NAME="Instruction/Data">
-                        <FORMAT>
-                            <ROW>
-                                <FIELD WIDTH="70" ENABLED="true" />
-                                <FIELD NAME="Label" WIDTH="150" ENABLED="true" />
-                            </ROW>
-                            <ROW>
-                                <FIELD NAME="Address" WIDTH="80" ENABLED="true" />
-                                <FIELD NAME="Mnemonic" WIDTH="60" ENABLED="true" />
-                                <FIELD NAME="Operands" WIDTH="195" ENABLED="true" />
-                            </ROW>
-                        </FORMAT>
-                    </XML>
-                    <XML NAME="Plate">
-                        <FORMAT>
-                            <ROW />
-                        </FORMAT>
-                    </XML>
-                    <XML NAME="Open Data">
-                        <FORMAT>
-                            <ROW>
-                                <FIELD NAME="Address" WIDTH="50" ENABLED="true" />
-                                <FIELD NAME="Mnemonic" WIDTH="37" ENABLED="true" />
-                                <FIELD NAME="Operands" WIDTH="195" ENABLED="true" />
-                            </ROW>
-                        </FORMAT>
-                    </XML>
-                </SAVE_STATE>
-            </XML>
-            <ENUM NAME="EDGE_HOVER_HIGHLIGHT" TYPE="enum" CLASS="ghidra.app.plugin.core.functiongraph.EdgeDisplayType" VALUE="ScopedFlowsFromVertex" />
+        <PLUGIN_STATE CLASS="functioncalls.plugin.FunctionCallGraphPlugin">
             <STATE NAME="DISPLAY_SATELLITE" TYPE="boolean" VALUE="true" />
-            <STATE NAME="LAYOUT_NAME" TYPE="string" VALUE="ghidra.app.plugin.core.functiongraph.graph.layout.DecompilerNestedLayoutProvider" />
-            <STATE NAME="DISPLAY_POPUPS" TYPE="boolean" VALUE="true" />
-            <ENUM NAME="EDGE_SELECTION_HIGHLIGHT" TYPE="enum" CLASS="ghidra.app.plugin.core.functiongraph.EdgeDisplayType" VALUE="AllCycles" />
             <STATE NAME="DOCK_SATELLITE" TYPE="boolean" VALUE="true" />
         </PLUGIN_STATE>
         <PLUGIN_STATE CLASS="ghidra.app.plugin.core.bookmark.BookmarkPlugin">
@@ -151,6 +268,15 @@
                 <A VALUE="Error" />
                 <A VALUE="Info" />
             </ARRAY>
+        </PLUGIN_STATE>
+        <PLUGIN_STATE CLASS="ghidra.app.plugin.core.byteviewer.ByteViewerPlugin">
+            <ARRAY NAME="View Names" TYPE="string">
+                <A VALUE="Hex" />
+                <A VALUE="Ascii" />
+            </ARRAY>
+            <STATE NAME="Hex view groupsize" TYPE="int" VALUE="1" />
+            <STATE NAME="Bytes Per Line" TYPE="int" VALUE="16" />
+            <STATE NAME="Offset" TYPE="int" VALUE="0" />
         </PLUGIN_STATE>
         <PLUGIN_STATE CLASS="ghidra.app.plugin.core.codebrowser.CodeBrowserPlugin">
             <XML NAME="Array">
@@ -288,8 +414,8 @@
             <ARRAY NAME="RecentArchiveNames" TYPE="string">
                 <A VALUE="$GHIDRA_HOME/Features/Base/data/typeinfo/generic/generic_clib.gdt" />
                 <A VALUE="$GHIDRA_HOME/Features/Base/data/typeinfo/win32/windows_vs12_32.gdt" />
-                <A VALUE="$GHIDRA_HOME/Features/Base/data/typeinfo/mac_10.9/mac_osx.gdt" />
                 <A VALUE="$GHIDRA_HOME/Features/Base/data/typeinfo/generic/generic_clib_64.gdt" />
+                <A VALUE="$GHIDRA_HOME/Features/Base/data/typeinfo/mac_10.9/mac_osx.gdt" />
                 <A VALUE="$GHIDRA_HOME/Features/Base/data/typeinfo/win32/windows_vs12_64.gdt" />
             </ARRAY>
             <STATE NAME="PointerFilterState" TYPE="boolean" VALUE="false" />
@@ -312,6 +438,176 @@
                 <A VALUE="/qword" />
             </ARRAY>
             <STATE NAME="DataMembersInSearchState" TYPE="boolean" VALUE="false" />
+        </PLUGIN_STATE>
+        <PLUGIN_STATE CLASS="ghidra.app.plugin.core.datapreview.DataTypePreviewPlugin">
+            <STATE NAME="TerminatedCString" TYPE="string" VALUE="/" />
+            <STATE NAME="byte" TYPE="string" VALUE="/" />
+            <STATE NAME="double" TYPE="string" VALUE="/" />
+            <STATE NAME="dword" TYPE="string" VALUE="/" />
+            <STATE NAME="char" TYPE="string" VALUE="/" />
+            <STATE NAME="qword" TYPE="string" VALUE="/" />
+            <STATE NAME="TerminatedUnicode" TYPE="string" VALUE="/" />
+            <STATE NAME="float" TYPE="string" VALUE="/" />
+            <STATE NAME="word" TYPE="string" VALUE="/" />
+        </PLUGIN_STATE>
+        <PLUGIN_STATE CLASS="ghidra.app.plugin.core.functiongraph.FunctionGraphPlugin">
+            <XML NAME="USER_DEFINED_FORMAT_MANAGER">
+                <SAVE_STATE>
+                    <XML NAME="Array">
+                        <FORMAT>
+                            <ROW>
+                                <FIELD NAME="Address" WIDTH="50" ENABLED="true" />
+                            </ROW>
+                        </FORMAT>
+                    </XML>
+                    <XML NAME="Function">
+                        <FORMAT>
+                            <ROW>
+                                <FIELD NAME="Function Signature" WIDTH="410" ENABLED="true" />
+                            </ROW>
+                        </FORMAT>
+                    </XML>
+                    <XML NAME="Variable">
+                        <FORMAT>
+                            <ROW>
+                                <FIELD WIDTH="50" ENABLED="true" />
+                                <FIELD NAME="Variable Type" WIDTH="110" ENABLED="true" />
+                                <FIELD NAME="Variable Location" WIDTH="120" ENABLED="true" />
+                                <FIELD NAME="Variable Name" WIDTH="280" ENABLED="true" />
+                            </ROW>
+                        </FORMAT>
+                    </XML>
+                    <XML NAME="Address Break">
+                        <FORMAT>
+                            <ROW />
+                        </FORMAT>
+                    </XML>
+                    <XML NAME="Instruction/Data">
+                        <FORMAT>
+                            <ROW>
+                                <FIELD WIDTH="70" ENABLED="true" />
+                                <FIELD NAME="Label" WIDTH="150" ENABLED="true" />
+                            </ROW>
+                            <ROW>
+                                <FIELD NAME="Address" WIDTH="80" ENABLED="true" />
+                                <FIELD NAME="Mnemonic" WIDTH="60" ENABLED="true" />
+                                <FIELD NAME="Operands" WIDTH="195" ENABLED="true" />
+                            </ROW>
+                        </FORMAT>
+                    </XML>
+                    <XML NAME="Plate">
+                        <FORMAT>
+                            <ROW />
+                        </FORMAT>
+                    </XML>
+                    <XML NAME="Open Data">
+                        <FORMAT>
+                            <ROW>
+                                <FIELD NAME="Address" WIDTH="50" ENABLED="true" />
+                                <FIELD NAME="Mnemonic" WIDTH="37" ENABLED="true" />
+                                <FIELD NAME="Operands" WIDTH="195" ENABLED="true" />
+                            </ROW>
+                        </FORMAT>
+                    </XML>
+                </SAVE_STATE>
+            </XML>
+            <ENUM NAME="EDGE_HOVER_HIGHLIGHT" TYPE="enum" CLASS="ghidra.app.plugin.core.functiongraph.EdgeDisplayType" VALUE="ScopedFlowsFromVertex" />
+            <STATE NAME="DISPLAY_SATELLITE" TYPE="boolean" VALUE="true" />
+            <STATE NAME="LAYOUT_NAME" TYPE="string" VALUE="ghidra.app.plugin.core.functiongraph.graph.layout.DecompilerNestedLayoutProvider" />
+            <STATE NAME="DISPLAY_POPUPS" TYPE="boolean" VALUE="true" />
+            <ENUM NAME="EDGE_SELECTION_HIGHLIGHT" TYPE="enum" CLASS="ghidra.app.plugin.core.functiongraph.EdgeDisplayType" VALUE="AllCycles" />
+            <STATE NAME="DOCK_SATELLITE" TYPE="boolean" VALUE="true" />
+        </PLUGIN_STATE>
+        <PLUGIN_STATE CLASS="ghidra.app.plugin.core.graph.GraphDisplayBrokerPlugin">
+            <STATE NAME="ACTIVE_GRAPH_PROVIDER" TYPE="string" VALUE="Default Graph Display" />
+        </PLUGIN_STATE>
+        <PLUGIN_STATE CLASS="ghidra.app.plugin.core.navigation.GoToAddressLabelPlugin">
+            <STATE NAME="CASE_SENSITIVE" TYPE="boolean" VALUE="false" />
+            <STATE NAME="INCLUDE_DYNAMIC" TYPE="boolean" VALUE="true" />
+            <ARRAY NAME="GO_TO_HISTORY" TYPE="string">
+                <A VALUE="6339b56b" />
+                <A VALUE="20cca100" />
+                <A VALUE="call_refer_struct_unk1" />
+                <A VALUE="xml_parse_content" />
+                <A VALUE="208805e1" />
+                <A VALUE="20869060" />
+                <A VALUE="2106fb08" />
+                <A VALUE="2086fb08" />
+                <A VALUE="20889CD9" />
+                <A VALUE="20889D60" />
+            </ARRAY>
+        </PLUGIN_STATE>
+        <PLUGIN_STATE CLASS="ghidra.app.plugin.core.overview.OverviewColorPlugin">
+            <ARRAY NAME="ActiveServices" TYPE="string">
+                <A VALUE="Overview" />
+            </ARRAY>
+        </PLUGIN_STATE>
+        <PLUGIN_STATE CLASS="ghidra.app.plugin.core.script.GhidraScriptMgrPlugin">
+            <ARRAY NAME="BundleHost_FILE" TYPE="string">
+                <A VALUE="$GHIDRA_HOME/Features/FileFormats/ghidra_scripts" />
+                <A VALUE="$GHIDRA_HOME/Features/VersionTracking/ghidra_scripts" />
+                <A VALUE="$GHIDRA_HOME/Features/FunctionID/ghidra_scripts" />
+                <A VALUE="$GHIDRA_HOME/Features/Base/ghidra_scripts" />
+                <A VALUE="$GHIDRA_HOME/Features/BytePatterns/ghidra_scripts" />
+                <A VALUE="$GHIDRA_HOME/Features/Decompiler/ghidra_scripts" />
+                <A VALUE="$GHIDRA_HOME/Processors/8051/ghidra_scripts" />
+                <A VALUE="$USER_HOME/ghidra_scripts" />
+                <A VALUE="$GHIDRA_HOME/Features/Python/ghidra_scripts" />
+                <A VALUE="$GHIDRA_HOME/Processors/PIC/ghidra_scripts" />
+                <A VALUE="$GHIDRA_HOME/Features/GnuDemangler/ghidra_scripts" />
+                <A VALUE="$GHIDRA_HOME/Processors/DATA/ghidra_scripts" />
+            </ARRAY>
+            <ARRAY NAME="Scripts_Actions_Key" TYPE="string" />
+            <ARRAY NAME="BundleHost_ACTIVE" TYPE="boolean">
+                <A VALUE="false" />
+                <A VALUE="false" />
+                <A VALUE="false" />
+                <A VALUE="false" />
+                <A VALUE="false" />
+                <A VALUE="true" />
+                <A VALUE="false" />
+                <A VALUE="false" />
+                <A VALUE="false" />
+                <A VALUE="false" />
+                <A VALUE="false" />
+                <A VALUE="false" />
+            </ARRAY>
+            <STATE NAME="DEFAULT_FONT_NAME" TYPE="string" VALUE="monospaced" />
+            <ARRAY NAME="BundleHost_SYSTEM" TYPE="boolean">
+                <A VALUE="true" />
+                <A VALUE="true" />
+                <A VALUE="true" />
+                <A VALUE="true" />
+                <A VALUE="true" />
+                <A VALUE="true" />
+                <A VALUE="true" />
+                <A VALUE="false" />
+                <A VALUE="true" />
+                <A VALUE="true" />
+                <A VALUE="true" />
+                <A VALUE="true" />
+            </ARRAY>
+            <STATE NAME="DEFAULT_FONT_SIZE" TYPE="int" VALUE="12" />
+            <STATE NAME="DEFAULT_FONT_STYLE" TYPE="int" VALUE="0" />
+            <ARRAY NAME="BundleHost_ENABLE" TYPE="boolean">
+                <A VALUE="true" />
+                <A VALUE="true" />
+                <A VALUE="true" />
+                <A VALUE="true" />
+                <A VALUE="true" />
+                <A VALUE="true" />
+                <A VALUE="true" />
+                <A VALUE="false" />
+                <A VALUE="true" />
+                <A VALUE="true" />
+                <A VALUE="true" />
+                <A VALUE="true" />
+            </ARRAY>
+            <STATE NAME="DESCRIPTION_DIVIDER_LOCATION" TYPE="int" VALUE="545" />
+            <STATE NAME="FILTER_TEXT" TYPE="string" VALUE="" />
+        </PLUGIN_STATE>
+        <PLUGIN_STATE CLASS="ghidra.app.plugin.core.symboltree.SymbolTreePlugin">
+            <STATE NAME="GO_TO_TOGGLE_STATE" TYPE="boolean" VALUE="false" />
         </PLUGIN_STATE>
         <PLUGIN_STATE CLASS="ghidra.app.plugin.core.symtable.SymbolTablePlugin">
             <XML NAME="FILTER_SETTINGS">
@@ -405,106 +701,6 @@
                 </SYMBOL_TABLE_FILTER>
             </XML>
         </PLUGIN_STATE>
-        <PLUGIN_STATE CLASS="ghidra.app.plugin.core.byteviewer.ByteViewerPlugin">
-            <ARRAY NAME="View Names" TYPE="string">
-                <A VALUE="Hex" />
-                <A VALUE="Ascii" />
-            </ARRAY>
-            <STATE NAME="Hex view groupsize" TYPE="int" VALUE="1" />
-            <STATE NAME="Bytes Per Line" TYPE="int" VALUE="16" />
-            <STATE NAME="Offset" TYPE="int" VALUE="0" />
-        </PLUGIN_STATE>
-        <PLUGIN_STATE CLASS="ghidra.app.plugin.core.script.GhidraScriptMgrPlugin">
-            <ARRAY NAME="Scripts_Actions_Key" TYPE="string">
-                <A VALUE="SwitchOverride.java" />
-                <A VALUE="FindUnrecoveredSwitchesScript.java" />
-                <A VALUE="MarkupWallaceSrcScript.java" />
-            </ARRAY>
-            <ARRAY NAME="PathManagerPanel_ENABLE" TYPE="boolean">
-                <A VALUE="true" />
-                <A VALUE="true" />
-                <A VALUE="true" />
-                <A VALUE="true" />
-                <A VALUE="true" />
-                <A VALUE="true" />
-                <A VALUE="true" />
-                <A VALUE="true" />
-                <A VALUE="true" />
-                <A VALUE="true" />
-                <A VALUE="true" />
-                <A VALUE="true" />
-                <A VALUE="true" />
-                <A VALUE="true" />
-            </ARRAY>
-            <ARRAY NAME="PathManagerPanel_EDIT" TYPE="boolean">
-                <A VALUE="true" />
-                <A VALUE="true" />
-                <A VALUE="false" />
-                <A VALUE="false" />
-                <A VALUE="false" />
-                <A VALUE="false" />
-                <A VALUE="false" />
-                <A VALUE="false" />
-                <A VALUE="false" />
-                <A VALUE="false" />
-                <A VALUE="false" />
-                <A VALUE="false" />
-                <A VALUE="false" />
-                <A VALUE="false" />
-            </ARRAY>
-            <ARRAY NAME="PathManagerPanel_PATH" TYPE="string">
-                <A VALUE="/Do_Not_Scan/3.tmp/INFILTRATE2019-master/Completed" />
-                <A VALUE="/Do_Not_Scan/3.tmp/INFILTRATE2019-master" />
-                <A VALUE="$USER_HOME/ghidra_scripts" />
-                <A VALUE="$GHIDRA_HOME/Features/Base/ghidra_scripts" />
-                <A VALUE="$GHIDRA_HOME/Features/BytePatterns/ghidra_scripts" />
-                <A VALUE="$GHIDRA_HOME/Features/Decompiler/ghidra_scripts" />
-                <A VALUE="$GHIDRA_HOME/Features/FileFormats/ghidra_scripts" />
-                <A VALUE="$GHIDRA_HOME/Features/FunctionID/ghidra_scripts" />
-                <A VALUE="$GHIDRA_HOME/Features/GnuDemangler/ghidra_scripts" />
-                <A VALUE="$GHIDRA_HOME/Features/Python/ghidra_scripts" />
-                <A VALUE="$GHIDRA_HOME/Features/VersionTracking/ghidra_scripts" />
-                <A VALUE="$GHIDRA_HOME/Processors/8051/ghidra_scripts" />
-                <A VALUE="$GHIDRA_HOME/Processors/DATA/ghidra_scripts" />
-                <A VALUE="$GHIDRA_HOME/Processors/PIC/ghidra_scripts" />
-            </ARRAY>
-            <STATE NAME="DEFAULT_FONT_NAME" TYPE="string" VALUE="monospaced" />
-            <ARRAY NAME="PathManagerPanel_READ" TYPE="boolean">
-                <A VALUE="false" />
-                <A VALUE="false" />
-                <A VALUE="false" />
-                <A VALUE="true" />
-                <A VALUE="true" />
-                <A VALUE="true" />
-                <A VALUE="true" />
-                <A VALUE="true" />
-                <A VALUE="true" />
-                <A VALUE="true" />
-                <A VALUE="true" />
-                <A VALUE="true" />
-                <A VALUE="true" />
-                <A VALUE="true" />
-            </ARRAY>
-            <STATE NAME="DEFAULT_FONT_SIZE" TYPE="int" VALUE="12" />
-            <STATE NAME="DEFAULT_FONT_STYLE" TYPE="int" VALUE="0" />
-            <STATE NAME="DESCRIPTION_DIVIDER_LOCATION" TYPE="int" VALUE="545" />
-            <STATE NAME="FILTER_TEXT" TYPE="string" VALUE="" />
-        </PLUGIN_STATE>
-        <PLUGIN_STATE CLASS="functioncalls.plugin.FunctionCallGraphPlugin">
-            <STATE NAME="DISPLAY_SATELLITE" TYPE="boolean" VALUE="true" />
-            <STATE NAME="DOCK_SATELLITE" TYPE="boolean" VALUE="true" />
-        </PLUGIN_STATE>
-        <PLUGIN_STATE CLASS="ghidra.app.plugin.core.datapreview.DataTypePreviewPlugin">
-            <STATE NAME="TerminatedCString" TYPE="string" VALUE="/" />
-            <STATE NAME="byte" TYPE="string" VALUE="/" />
-            <STATE NAME="double" TYPE="string" VALUE="/" />
-            <STATE NAME="dword" TYPE="string" VALUE="/" />
-            <STATE NAME="char" TYPE="string" VALUE="/" />
-            <STATE NAME="qword" TYPE="string" VALUE="/" />
-            <STATE NAME="TerminatedUnicode" TYPE="string" VALUE="/" />
-            <STATE NAME="float" TYPE="string" VALUE="/" />
-            <STATE NAME="word" TYPE="string" VALUE="/" />
-        </PLUGIN_STATE>
         <PLUGIN_STATE CLASS="ghidra.plugin.importer.ImporterPlugin">
             <ARRAY NAME="library search paths" TYPE="string">
                 <A VALUE="." />
@@ -515,95 +711,74 @@
                 <A VALUE="/usr/lib/java" />
             </ARRAY>
         </PLUGIN_STATE>
-        <PLUGIN_STATE CLASS="ghidra.app.plugin.core.overview.OverviewColorPlugin">
-            <ARRAY NAME="ActiveServices" TYPE="string">
-                <A VALUE="Overview" />
-            </ARRAY>
-        </PLUGIN_STATE>
-        <PLUGIN_STATE CLASS="ghidra.app.plugin.core.navigation.GoToAddressLabelPlugin">
-            <STATE NAME="CASE_SENSITIVE" TYPE="boolean" VALUE="false" />
-            <STATE NAME="INCLUDE_DYNAMIC" TYPE="boolean" VALUE="true" />
-            <ARRAY NAME="GO_TO_HISTORY" TYPE="string">
-                <A VALUE="6339b56b" />
-                <A VALUE="20cca100" />
-                <A VALUE="call_refer_struct_unk1" />
-                <A VALUE="xml_parse_content" />
-                <A VALUE="208805e1" />
-                <A VALUE="20869060" />
-                <A VALUE="2106fb08" />
-                <A VALUE="2086fb08" />
-                <A VALUE="20889CD9" />
-                <A VALUE="20889D60" />
-            </ARRAY>
-        </PLUGIN_STATE>
-        <ROOT_NODE X_POS="0" Y_POS="23" WIDTH="1680" HEIGHT="1027" EX_STATE="6" FOCUSED_OWNER="CodeBrowserPlugin" FOCUSED_NAME="CodeBrowserPlugin" FOCUSED_TITLE="Listing: jscript.dll">
-            <SPLIT_NODE WIDTH="1920" HEIGHT="1068" DIVIDER_LOCATION="739" ORIENTATION="VERTICAL">
+        <ROOT_NODE X_POS="0" Y_POS="23" WIDTH="1920" HEIGHT="1057" EX_STATE="0" FOCUSED_OWNER="DecompilePlugin" FOCUSED_NAME="Decompiler" FOCUSED_TITLE="Decompile">
+            <SPLIT_NODE WIDTH="1920" HEIGHT="955" DIVIDER_LOCATION="739" ORIENTATION="VERTICAL">
                 <SPLIT_NODE WIDTH="1621" HEIGHT="816" DIVIDER_LOCATION="148" ORIENTATION="VERTICAL">
                     <COMPONENT_NODE TOP_INFO="0">
                         <COMPONENT_INFO NAME="Entropy" OWNER="EntropyPlugin" TITLE="Entropy" ACTIVE="false" GROUP="Header" INSTANCE_ID="3207819926581772885" />
                         <COMPONENT_INFO NAME="Overview" OWNER="OverviewPlugin" TITLE="Overview" ACTIVE="false" GROUP="Header" INSTANCE_ID="3207819926581772883" />
                     </COMPONENT_NODE>
-                    <SPLIT_NODE WIDTH="1680" HEIGHT="918" DIVIDER_LOCATION="143" ORIENTATION="HORIZONTAL">
-                        <SPLIT_NODE WIDTH="240" HEIGHT="918" DIVIDER_LOCATION="640" ORIENTATION="VERTICAL">
+                    <SPLIT_NODE WIDTH="1920" HEIGHT="703" DIVIDER_LOCATION="143" ORIENTATION="HORIZONTAL">
+                        <SPLIT_NODE WIDTH="274" HEIGHT="703" DIVIDER_LOCATION="640" ORIENTATION="VERTICAL">
                             <SPLIT_NODE WIDTH="274" HEIGHT="681" DIVIDER_LOCATION="502" ORIENTATION="VERTICAL">
                                 <COMPONENT_NODE TOP_INFO="0">
-                                    <COMPONENT_INFO NAME="ProgramTreePlugin" OWNER="ProgramTreePlugin" TITLE="Program Trees" ACTIVE="false" GROUP="Default" INSTANCE_ID="3291030387219741731" />
+                                    <COMPONENT_INFO NAME="Program Tree" OWNER="ProgramTreePlugin" TITLE="Program Trees" ACTIVE="false" GROUP="Default" INSTANCE_ID="3380633070166601547" />
                                 </COMPONENT_NODE>
                                 <COMPONENT_NODE TOP_INFO="0">
-                                    <COMPONENT_INFO NAME="Symbol Tree" OWNER="SymbolTreePlugin" TITLE="Symbol Tree" ACTIVE="true" GROUP="Default" INSTANCE_ID="3291030356991392828" />
+                                    <COMPONENT_INFO NAME="Symbol Tree" OWNER="SymbolTreePlugin" TITLE="Symbol Tree" ACTIVE="true" GROUP="Default" INSTANCE_ID="3380633070166601551" />
                                 </COMPONENT_NODE>
                             </SPLIT_NODE>
                             <COMPONENT_NODE TOP_INFO="0">
-                                <COMPONENT_INFO NAME="DataTypes Provider" OWNER="DataTypeManagerPlugin" TITLE="Data Type Manager" ACTIVE="true" GROUP="Default" INSTANCE_ID="3291030387219741740" />
+                                <COMPONENT_INFO NAME="DataTypes Provider" OWNER="DataTypeManagerPlugin" TITLE="Data Type Manager" ACTIVE="true" GROUP="Default" INSTANCE_ID="3380633070166601553" />
                             </COMPONENT_NODE>
                         </SPLIT_NODE>
-                        <SPLIT_NODE WIDTH="1642" HEIGHT="1068" DIVIDER_LOCATION="785" ORIENTATION="VERTICAL">
+                        <SPLIT_NODE WIDTH="1642" HEIGHT="698" DIVIDER_LOCATION="785" ORIENTATION="VERTICAL">
                             <SPLIT_NODE WIDTH="1642" HEIGHT="1068" DIVIDER_LOCATION="705" ORIENTATION="VERTICAL">
-                                <SPLIT_NODE WIDTH="1436" HEIGHT="918" DIVIDER_LOCATION="509" ORIENTATION="HORIZONTAL">
+                                <SPLIT_NODE WIDTH="1642" HEIGHT="703" DIVIDER_LOCATION="509" ORIENTATION="HORIZONTAL">
                                     <SPLIT_NODE WIDTH="834" HEIGHT="1068" DIVIDER_LOCATION="589" ORIENTATION="VERTICAL">
                                         <COMPONENT_NODE TOP_INFO="0">
-                                            <COMPONENT_INFO NAME="CodeBrowserPlugin" OWNER="CodeBrowserPlugin" TITLE="Listing: jscript.dll" ACTIVE="true" GROUP="Core" INSTANCE_ID="3291030387219741729" />
+                                            <COMPONENT_INFO NAME="Listing" OWNER="CodeBrowserPlugin" TITLE="Listing: " ACTIVE="true" GROUP="Core" INSTANCE_ID="3380633070166601538" />
                                         </COMPONENT_NODE>
                                         <COMPONENT_NODE TOP_INFO="0">
                                             <COMPONENT_INFO NAME="Structure Editor" OWNER="DataTypeManagerPlugin" TITLE="Structure Editor - jfElementImpl_vtbl (AcroForm.api)" ACTIVE="false" GROUP="Default" INSTANCE_ID="3290955553961917493" />
                                         </COMPONENT_NODE>
                                     </SPLIT_NODE>
                                     <COMPONENT_NODE TOP_INFO="0">
-                                        <COMPONENT_INFO NAME="Decompiler" OWNER="DecompilePlugin" TITLE="Decompile: VAR::FTrue(void)" ACTIVE="true" GROUP="Default" INSTANCE_ID="3291030387219741728" />
-                                        <COMPONENT_INFO NAME="Bytes" OWNER="ByteViewerPlugin" TITLE="Bytes: jscript.dll" ACTIVE="false" GROUP="Default" INSTANCE_ID="3291030387219741732" />
-                                        <COMPONENT_INFO NAME="Data Window" OWNER="DataWindowPlugin" TITLE="Defined Data" ACTIVE="false" GROUP="Default" INSTANCE_ID="3291030387444137007" />
-                                        <COMPONENT_INFO NAME="Defined Strings" OWNER="ViewStringsPlugin" TITLE="Defined Strings" ACTIVE="true" GROUP="Default" INSTANCE_ID="3291030387444137003" />
-                                        <COMPONENT_INFO NAME="Equates Table" OWNER="EquateTablePlugin" TITLE="Equates Table" ACTIVE="false" GROUP="Default" INSTANCE_ID="3291030356991392829" />
-                                        <COMPONENT_INFO NAME="External Programs" OWNER="ReferencesPlugin" TITLE="External Programs" ACTIVE="false" GROUP="Default" INSTANCE_ID="3291030356991392827" />
-                                        <COMPONENT_INFO NAME="Functions Window" OWNER="FunctionWindowPlugin" TITLE="Functions" ACTIVE="true" GROUP="Default" INSTANCE_ID="3291030387219741738" />
-                                        <COMPONENT_INFO NAME="Relocation Table" OWNER="RelocationTablePlugin" TITLE="Relocation Table" ACTIVE="false" GROUP="Default" INSTANCE_ID="3291030387444137008" />
+                                        <COMPONENT_INFO NAME="Decompiler" OWNER="DecompilePlugin" TITLE="Decompile" ACTIVE="true" GROUP="Default" INSTANCE_ID="3380633070166601541" />
+                                        <COMPONENT_INFO NAME="Bytes" OWNER="ByteViewerPlugin" TITLE="Bytes: No Program" ACTIVE="false" GROUP="Default" INSTANCE_ID="3380633027120459615" />
+                                        <COMPONENT_INFO NAME="Data Window" OWNER="DataWindowPlugin" TITLE="Defined Data" ACTIVE="false" GROUP="Default" INSTANCE_ID="3380633070462299991" />
+                                        <COMPONENT_INFO NAME="Defined Strings" OWNER="ViewStringsPlugin" TITLE="Defined Strings" ACTIVE="true" GROUP="Default" INSTANCE_ID="3380633070462299987" />
+                                        <COMPONENT_INFO NAME="Equates Table" OWNER="EquateTablePlugin" TITLE="Equates Table" ACTIVE="false" GROUP="Default" INSTANCE_ID="3380633070166601543" />
+                                        <COMPONENT_INFO NAME="External Programs" OWNER="ReferencesPlugin" TITLE="External Programs" ACTIVE="false" GROUP="Default" INSTANCE_ID="3380633070166601548" />
+                                        <COMPONENT_INFO NAME="Functions Window" OWNER="FunctionWindowPlugin" TITLE="Functions" ACTIVE="true" GROUP="Default" INSTANCE_ID="3380633070462299983" />
+                                        <COMPONENT_INFO NAME="Relocation Table" OWNER="RelocationTablePlugin" TITLE="Relocation Table" ACTIVE="false" GROUP="Default" INSTANCE_ID="3380633070462299986" />
                                         <COMPONENT_INFO NAME="References Editor " OWNER="ReferencesPlugin" TITLE="References Editor @ 6339b610  (jscript.dll)" ACTIVE="false" GROUP="Default" INSTANCE_ID="3291082641664621630" />
                                     </COMPONENT_NODE>
                                 </SPLIT_NODE>
                                 <SPLIT_NODE WIDTH="1386" HEIGHT="189" DIVIDER_LOCATION="495" ORIENTATION="HORIZONTAL">
                                     <COMPONENT_NODE TOP_INFO="0">
-                                        <COMPONENT_INFO NAME="Data Type Preview" OWNER="DataTypePreviewPlugin" TITLE="Data Type Preview" ACTIVE="false" GROUP="Default" INSTANCE_ID="3291030387444137002" />
+                                        <COMPONENT_INFO NAME="Data Type Preview" OWNER="DataTypePreviewPlugin" TITLE="Data Type Preview" ACTIVE="false" GROUP="Default" INSTANCE_ID="3380633070462299982" />
                                     </COMPONENT_NODE>
                                     <COMPONENT_NODE TOP_INFO="0">
-                                        <COMPONENT_INFO NAME="Virtual Disassembler - Current Instruction" OWNER="DisassembledViewPlugin" TITLE="Disassembled View" ACTIVE="false" GROUP="Default" INSTANCE_ID="3291030387219741733" />
+                                        <COMPONENT_INFO NAME="Virtual Disassembler - Current Instruction" OWNER="DisassembledViewPlugin" TITLE="Disassembled View" ACTIVE="false" GROUP="Default" INSTANCE_ID="3380633070166601542" />
                                     </COMPONENT_NODE>
                                 </SPLIT_NODE>
                             </SPLIT_NODE>
-                            <COMPONENT_NODE TOP_INFO="0">
-                                <COMPONENT_INFO NAME="ConsolePlugin" OWNER="ConsolePlugin" TITLE="Console" ACTIVE="false" GROUP="Default" INSTANCE_ID="3291030356991392830" />
-                                <COMPONENT_INFO NAME="Bookmarks" OWNER="BookmarkPlugin" TITLE="Bookmarks" ACTIVE="false" GROUP="Core.Bookmarks" INSTANCE_ID="3291030356991392831" />
+                            <COMPONENT_NODE TOP_INFO="1">
+                                <COMPONENT_INFO NAME="Console" OWNER="ConsolePlugin" TITLE="Console" ACTIVE="false" GROUP="Default" INSTANCE_ID="3380633070166601539" />
+                                <COMPONENT_INFO NAME="Bookmarks" OWNER="BookmarkPlugin" TITLE="Bookmarks" ACTIVE="false" GROUP="Core.Bookmarks" INSTANCE_ID="3380633027120459614" />
                             </COMPONENT_NODE>
                         </SPLIT_NODE>
                     </SPLIT_NODE>
                 </SPLIT_NODE>
                 <COMPONENT_NODE TOP_INFO="0">
-                    <COMPONENT_INFO NAME="Function Call Trees" OWNER="CallTreePlugin" TITLE="Function Call Trees: _function_pointer" ACTIVE="false" GROUP="Default" INSTANCE_ID="3285817689923229251" />
+                    <COMPONENT_INFO NAME="Function Call Trees" OWNER="CallTreePlugin" TITLE="Function Call Trees" ACTIVE="true" GROUP="Default" INSTANCE_ID="3380633070166601536" />
                 </COMPONENT_NODE>
             </SPLIT_NODE>
             <WINDOW_NODE X_POS="144" Y_POS="188" WIDTH="1392" HEIGHT="696">
                 <SPLIT_NODE WIDTH="1392" HEIGHT="615" DIVIDER_LOCATION="545" ORIENTATION="HORIZONTAL">
                     <COMPONENT_NODE TOP_INFO="0">
-                        <COMPONENT_INFO NAME="Script Manager" OWNER="GhidraScriptMgrPlugin" TITLE="Script Manager" ACTIVE="false" GROUP="Script Group" INSTANCE_ID="3291030387219741734" />
+                        <COMPONENT_INFO NAME="Script Manager" OWNER="GhidraScriptMgrPlugin" TITLE="Script Manager" ACTIVE="false" GROUP="Script Group" INSTANCE_ID="3380633070166601549" />
                     </COMPONENT_NODE>
                     <COMPONENT_NODE TOP_INFO="0">
                         <COMPONENT_INFO NAME="Script Editor" OWNER="GhidraScriptMgrPlugin" TITLE="GhidraMagNum.py" ACTIVE="false" GROUP="Script Group" INSTANCE_ID="3289775725204517986" />
@@ -612,52 +787,52 @@
             </WINDOW_NODE>
             <WINDOW_NODE X_POS="423" Y_POS="144" WIDTH="927" HEIGHT="370">
                 <COMPONENT_NODE TOP_INFO="0">
-                    <COMPONENT_INFO NAME="Memory Map" OWNER="MemoryMapPlugin" TITLE="Memory Map" ACTIVE="false" GROUP="Default" INSTANCE_ID="3291030387219741730" />
+                    <COMPONENT_INFO NAME="Memory Map" OWNER="MemoryMapPlugin" TITLE="Memory Map" ACTIVE="false" GROUP="Default" INSTANCE_ID="3380633070166601546" />
                 </COMPONENT_NODE>
             </WINDOW_NODE>
             <WINDOW_NODE X_POS="330" Y_POS="23" WIDTH="1020" HEIGHT="1027">
                 <COMPONENT_NODE TOP_INFO="0">
-                    <COMPONENT_INFO NAME="Function Graph" OWNER="FunctionGraphPlugin" TITLE="Function Graph" ACTIVE="false" GROUP="Function Graph" INSTANCE_ID="3291030387444137010" />
+                    <COMPONENT_INFO NAME="Function Graph" OWNER="FunctionGraphPlugin" TITLE="Function Graph" ACTIVE="false" GROUP="Function Graph" INSTANCE_ID="3380633070462299992" />
                 </COMPONENT_NODE>
             </WINDOW_NODE>
             <WINDOW_NODE X_POS="550" Y_POS="206" WIDTH="655" HEIGHT="509">
                 <COMPONENT_NODE TOP_INFO="0">
-                    <COMPONENT_INFO NAME="Register Manager" OWNER="RegisterPlugin" TITLE="Register Manager" ACTIVE="false" GROUP="Default" INSTANCE_ID="3291030387219741739" />
+                    <COMPONENT_INFO NAME="Register Manager" OWNER="RegisterPlugin" TITLE="Register Manager" ACTIVE="false" GROUP="Default" INSTANCE_ID="3380633070462299984" />
                 </COMPONENT_NODE>
             </WINDOW_NODE>
             <WINDOW_NODE X_POS="128" Y_POS="203" WIDTH="1424" HEIGHT="666">
                 <SPLIT_NODE WIDTH="1408" HEIGHT="559" DIVIDER_LOCATION="573" ORIENTATION="HORIZONTAL">
                     <COMPONENT_NODE TOP_INFO="0">
-                        <COMPONENT_INFO NAME="Symbol Table" OWNER="SymbolTablePlugin" TITLE="Symbol Table" ACTIVE="false" GROUP="symbolTable" INSTANCE_ID="3291030387444137004" />
+                        <COMPONENT_INFO NAME="Symbol Table" OWNER="SymbolTablePlugin" TITLE="Symbol Table" ACTIVE="false" GROUP="symbolTable" INSTANCE_ID="3380633070462299988" />
                     </COMPONENT_NODE>
                     <COMPONENT_NODE TOP_INFO="0">
-                        <COMPONENT_INFO NAME="Symbol References" OWNER="SymbolTablePlugin" TITLE="Symbol References" ACTIVE="false" GROUP="symbolTable" INSTANCE_ID="3291030387444137005" />
+                        <COMPONENT_INFO NAME="Symbol References" OWNER="SymbolTablePlugin" TITLE="Symbol References" ACTIVE="false" GROUP="symbolTable" INSTANCE_ID="3380633070462299989" />
                     </COMPONENT_NODE>
                 </SPLIT_NODE>
             </WINDOW_NODE>
             <WINDOW_NODE X_POS="-1" Y_POS="-1" WIDTH="0" HEIGHT="0">
                 <COMPONENT_NODE TOP_INFO="0">
-                    <COMPONENT_INFO NAME="Checksum Generator" OWNER="ComputeChecksumsPlugin" TITLE="Checksum Generator" ACTIVE="false" GROUP="Default" INSTANCE_ID="3291030356991392826" />
+                    <COMPONENT_INFO NAME="Checksum Generator" OWNER="ComputeChecksumsPlugin" TITLE="Checksum Generator" ACTIVE="false" GROUP="Default" INSTANCE_ID="3380633070166601537" />
                 </COMPONENT_NODE>
             </WINDOW_NODE>
             <WINDOW_NODE X_POS="-1" Y_POS="-1" WIDTH="0" HEIGHT="0">
                 <COMPONENT_NODE TOP_INFO="0">
-                    <COMPONENT_INFO NAME="Function Tags" OWNER="FunctionTagPlugin" TITLE="Function Tags" ACTIVE="false" GROUP="Default" INSTANCE_ID="3291030387219741736" />
+                    <COMPONENT_INFO NAME="Function Tags" OWNER="FunctionTagPlugin" TITLE="Function Tags" ACTIVE="false" GROUP="Default" INSTANCE_ID="3380633070166601545" />
                 </COMPONENT_NODE>
             </WINDOW_NODE>
             <WINDOW_NODE X_POS="-1" Y_POS="-1" WIDTH="0" HEIGHT="0">
                 <COMPONENT_NODE TOP_INFO="0">
-                    <COMPONENT_INFO NAME="Comment Window" OWNER="CommentWindowPlugin" TITLE="Comments" ACTIVE="false" GROUP="Default" INSTANCE_ID="3291030387444137009" />
+                    <COMPONENT_INFO NAME="Comment Window" OWNER="CommentWindowPlugin" TITLE="Comments" ACTIVE="false" GROUP="Default" INSTANCE_ID="3380633070462299990" />
                 </COMPONENT_NODE>
             </WINDOW_NODE>
             <WINDOW_NODE X_POS="972" Y_POS="305" WIDTH="613" HEIGHT="471">
                 <COMPONENT_NODE TOP_INFO="0">
-                    <COMPONENT_INFO NAME="Python" OWNER="InterpreterPanelPlugin" TITLE="Python" ACTIVE="false" GROUP="Default" INSTANCE_ID="3291030387444137006" />
+                    <COMPONENT_INFO NAME="Python" OWNER="InterpreterPanelPlugin" TITLE="Python" ACTIVE="false" GROUP="Default" INSTANCE_ID="3380633070462299985" />
                 </COMPONENT_NODE>
             </WINDOW_NODE>
             <WINDOW_NODE X_POS="0" Y_POS="23" WIDTH="1004" HEIGHT="1071">
                 <COMPONENT_NODE TOP_INFO="0">
-                    <COMPONENT_INFO NAME="Function Call Graph" OWNER="FunctionCallGraphPlugin" TITLE="Function Call Graph" ACTIVE="false" GROUP="Function Call Graph" INSTANCE_ID="3291030387219741741" />
+                    <COMPONENT_INFO NAME="Function Call Graph" OWNER="FunctionCallGraphPlugin" TITLE="Function Call Graph" ACTIVE="false" GROUP="Function Call Graph" INSTANCE_ID="3380633070166601552" />
                 </COMPONENT_NODE>
             </WINDOW_NODE>
             <WINDOW_NODE X_POS="0" Y_POS="23" WIDTH="1183" HEIGHT="511">
@@ -705,9 +880,17 @@
                     <COMPONENT_INFO NAME="Union Editor" OWNER="DataTypeManagerPlugin" TITLE="Union Editor - _CLS_LSN (clfs.sys)" ACTIVE="false" GROUP="Default" INSTANCE_ID="3288201288448463390" />
                 </COMPONENT_NODE>
             </WINDOW_NODE>
+            <WINDOW_NODE X_POS="0" Y_POS="0" WIDTH="0" HEIGHT="0">
+                <COMPONENT_NODE TOP_INFO="0">
+                    <COMPONENT_INFO NAME="BundleManager" OWNER="GhidraScriptMgrPlugin" TITLE="Bundle Manager" ACTIVE="false" GROUP="Default" INSTANCE_ID="3380633070166601550" />
+                </COMPONENT_NODE>
+            </WINDOW_NODE>
         </ROOT_NODE>
         <PREFERENCES>
             <PREFERENCE_STATE NAME="StringTablePlugin">
+                <STATE NAME="SELECTION_NAVIGATION_SELECTED_STATE" TYPE="boolean" VALUE="true" />
+            </PREFERENCE_STATE>
+            <PREFERENCE_STATE NAME="FunctionWindowPlugin">
                 <STATE NAME="SELECTION_NAVIGATION_SELECTED_STATE" TYPE="boolean" VALUE="true" />
             </PREFERENCE_STATE>
             <PREFERENCE_STATE NAME="ghidra.app.util.bean.SetEquateTableModel:Name:Path:# Refs:">
@@ -876,6 +1059,37 @@
                     </Table_State>
                 </XML>
             </PREFERENCE_STATE>
+            <PREFERENCE_STATE NAME="ghidra.app.plugin.core.functionwindow.FunctionTableModel:Name:Location:Function Signature:Function Size:">
+                <XML NAME="COLUMN_DATA">
+                    <Table_State>
+                        <COLUMN NAME="ghidra.app.plugin.core.functionwindow.FunctionTableModel$NameTableColumn.Name" WIDTH="256" VISIBLE="true" />
+                        <COLUMN NAME="ghidra.util.table.field.AddressTableColumn.Location" WIDTH="124" VISIBLE="true" />
+                        <COLUMN NAME="ghidra.util.table.field.FunctionSignatureTableColumn.Function Signature" WIDTH="169" VISIBLE="true" />
+                        <COLUMN NAME="ghidra.util.table.field.FunctionBodySizeTableColumn.Function Size" WIDTH="253" VISIBLE="true" />
+                        <COLUMN NAME="ghidra.util.table.field.FunctionTagTableColumn.Tags" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.PreviewTableColumn.Preview" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.CodeUnitTableColumn.Code Unit" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.LabelTableColumn.Label" WIDTH="200" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.FunctionCallingConventionTableColumn.Function Calling Convention" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.MemoryTypeProgramLocationBasedTableColumn.Mem Type" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.FunctionNameTableColumn.Function Name" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.FunctionPurgeTableColumn.Function Purge" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.ByteCountProgramLocationBasedTableColumn.Byte Count" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.NamespaceTableColumn.Namespace" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.ReferenceCountToAddressTableColumn.Reference Count" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.EOLCommentTableColumn.EOL Comment" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.FunctionParameterCountTableColumn.Param Count" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.OffcutReferenceCountToAddressTableColumn.Offcut Reference Count" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.MemorySectionProgramLocationBasedTableColumn.Mem Block" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.BytesTableColumn.Bytes" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.SourceTypeTableColumn.Symbol Source" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.SymbolTypeTableColumn.Symbol Type" WIDTH="500" VISIBLE="false" />
+                        <TABLE_SORT_STATE>
+                            <COLUMN_SORT_STATE COLUMN_MODEL_INDEX="3" SORT_DIRECTION="descending" SORT_ORDER="1" />
+                        </TABLE_SORT_STATE>
+                    </Table_State>
+                </XML>
+            </PREFERENCE_STATE>
             <PREFERENCE_STATE NAME="ghidra.app.plugin.core.register.RegisterValuesPanel$RegisterValuesTableModel:Start Address:End Address:Value:">
                 <XML NAME="COLUMN_DATA">
                     <Table_State>
@@ -906,6 +1120,7 @@
                     </Table_State>
                 </XML>
             </PREFERENCE_STATE>
+            <PREFERENCE_STATE NAME="GRAPH_DISPLAY_SERVICE" />
             <PREFERENCE_STATE NAME="ghidra.util.table.AddressArrayTableModel:Location:Label:Code Unit:">
                 <XML NAME="COLUMN_DATA">
                     <Table_State>
@@ -938,12 +1153,12 @@
             <PREFERENCE_STATE NAME="ghidra.app.plugin.core.bookmark.BookmarkTableModel:Type:Category:Description:Location:Label:Code Unit:">
                 <XML NAME="COLUMN_DATA">
                     <Table_State>
-                        <COLUMN NAME="ghidra.app.plugin.core.bookmark.BookmarkTableModel$TypeTableColumn.Type" WIDTH="182" VISIBLE="true" />
-                        <COLUMN NAME="ghidra.app.plugin.core.bookmark.BookmarkTableModel$CategoryTableColumn.Category" WIDTH="198" VISIBLE="true" />
-                        <COLUMN NAME="ghidra.app.plugin.core.bookmark.BookmarkTableModel$DescriptionTableColumn.Description" WIDTH="271" VISIBLE="true" />
-                        <COLUMN NAME="ghidra.util.table.field.AddressTableColumn.Location" WIDTH="213" VISIBLE="true" />
-                        <COLUMN NAME="ghidra.util.table.field.LabelTableColumn.Label" WIDTH="275" VISIBLE="true" />
-                        <COLUMN NAME="ghidra.util.table.field.CodeUnitTableColumn.Code Unit" WIDTH="274" VISIBLE="true" />
+                        <COLUMN NAME="ghidra.app.plugin.core.bookmark.BookmarkTableModel$TypeTableColumn.Type" WIDTH="216" VISIBLE="true" />
+                        <COLUMN NAME="ghidra.app.plugin.core.bookmark.BookmarkTableModel$CategoryTableColumn.Category" WIDTH="232" VISIBLE="true" />
+                        <COLUMN NAME="ghidra.app.plugin.core.bookmark.BookmarkTableModel$DescriptionTableColumn.Description" WIDTH="305" VISIBLE="true" />
+                        <COLUMN NAME="ghidra.util.table.field.AddressTableColumn.Location" WIDTH="248" VISIBLE="true" />
+                        <COLUMN NAME="ghidra.util.table.field.LabelTableColumn.Label" WIDTH="309" VISIBLE="true" />
+                        <COLUMN NAME="ghidra.util.table.field.CodeUnitTableColumn.Code Unit" WIDTH="309" VISIBLE="true" />
                         <COLUMN NAME="ghidra.util.table.field.PreviewTableColumn.Preview" WIDTH="500" VISIBLE="false" />
                         <COLUMN NAME="ghidra.util.table.field.MemoryTypeProgramLocationBasedTableColumn.Mem Type" WIDTH="500" VISIBLE="false" />
                         <COLUMN NAME="ghidra.util.table.field.FunctionNameTableColumn.Function Name" WIDTH="500" VISIBLE="false" />
@@ -1069,10 +1284,10 @@
             <PREFERENCE_STATE NAME="ghidra.app.plugin.core.strings.ViewStringsTableModel:Location:String Value:String Representation:Data Type:">
                 <XML NAME="COLUMN_DATA">
                     <Table_State>
-                        <COLUMN NAME="ghidra.app.plugin.core.strings.ViewStringsTableModel$DataLocationColumn.Location" WIDTH="125" VISIBLE="true" />
-                        <COLUMN NAME="ghidra.app.plugin.core.strings.ViewStringsTableModel$DataValueColumn.String Value" WIDTH="291" VISIBLE="true" />
-                        <COLUMN NAME="ghidra.app.plugin.core.strings.ViewStringsTableModel$StringRepColumn.String Representation" WIDTH="124" VISIBLE="true" />
-                        <COLUMN NAME="ghidra.app.plugin.core.strings.ViewStringsTableModel$DataTypeColumn.Data Type" WIDTH="123" VISIBLE="true" />
+                        <COLUMN NAME="ghidra.app.plugin.core.strings.ViewStringsTableModel$DataLocationColumn.Location" WIDTH="181" VISIBLE="true" />
+                        <COLUMN NAME="ghidra.app.plugin.core.strings.ViewStringsTableModel$DataValueColumn.String Value" WIDTH="265" VISIBLE="true" />
+                        <COLUMN NAME="ghidra.app.plugin.core.strings.ViewStringsTableModel$StringRepColumn.String Representation" WIDTH="178" VISIBLE="true" />
+                        <COLUMN NAME="ghidra.app.plugin.core.strings.ViewStringsTableModel$DataTypeColumn.Data Type" WIDTH="178" VISIBLE="true" />
                         <COLUMN NAME="ghidra.app.plugin.core.strings.ViewStringsTableModel$IsAsciiColumn.Is Ascii" WIDTH="500" VISIBLE="false" />
                         <COLUMN NAME="ghidra.app.plugin.core.strings.ViewStringsTableModel$CharsetColumn.Charset" WIDTH="500" VISIBLE="false" />
                         <COLUMN NAME="ghidra.app.plugin.core.strings.ViewStringsTableModel$HasEncodingErrorColumn.Has Encoding Error" WIDTH="500" VISIBLE="false" />
@@ -1097,7 +1312,7 @@
                         <COLUMN NAME="ghidra.util.table.field.SourceTypeTableColumn.Symbol Source" WIDTH="500" VISIBLE="false" />
                         <COLUMN NAME="ghidra.util.table.field.SymbolTypeTableColumn.Symbol Type" WIDTH="500" VISIBLE="false" />
                         <TABLE_SORT_STATE>
-                            <COLUMN_SORT_STATE COLUMN_MODEL_INDEX="0" SORT_DIRECTION="ascending" SORT_ORDER="1" />
+                            <COLUMN_SORT_STATE COLUMN_MODEL_INDEX="1" SORT_DIRECTION="descending" SORT_ORDER="1" />
                         </TABLE_SORT_STATE>
                     </Table_State>
                 </XML>
@@ -1174,6 +1389,14 @@
                         <TABLE_SORT_STATE>
                             <COLUMN_SORT_STATE COLUMN_MODEL_INDEX="0" SORT_DIRECTION="ascending" SORT_ORDER="1" />
                         </TABLE_SORT_STATE>
+                    </Table_State>
+                </XML>
+            </PREFERENCE_STATE>
+            <PREFERENCE_STATE NAME="ghidra.app.plugin.core.analysis.AnalysisPanel$1:Enabled:Analyzer Name:">
+                <XML NAME="COLUMN_DATA">
+                    <Table_State>
+                        <COLUMN NAME="Enabled" WIDTH="75" VISIBLE="true" />
+                        <COLUMN NAME="Analyzer Name" WIDTH="263" VISIBLE="true" />
                     </Table_State>
                 </XML>
             </PREFERENCE_STATE>
@@ -1265,6 +1488,19 @@
                         <COLUMN NAME="ghidra.util.table.field.SymbolTypeTableColumn.Symbol Type" WIDTH="500" VISIBLE="false" />
                         <TABLE_SORT_STATE>
                             <COLUMN_SORT_STATE COLUMN_MODEL_INDEX="1" SORT_DIRECTION="ascending" SORT_ORDER="1" />
+                        </TABLE_SORT_STATE>
+                    </Table_State>
+                </XML>
+            </PREFERENCE_STATE>
+            <PREFERENCE_STATE NAME="docking.ErrLogDialog$ErrEntryTableModel:#:Message:Details:">
+                <XML NAME="COLUMN_DATA">
+                    <Table_State>
+                        <COLUMN NAME="docking.ErrLogDialog$ErrEntryTableModel$IdColumn.#" WIDTH="15" VISIBLE="true" />
+                        <COLUMN NAME="docking.ErrLogDialog$ErrEntryTableModel$MessageColumn.Message" WIDTH="15" VISIBLE="true" />
+                        <COLUMN NAME="docking.ErrLogDialog$ErrEntryTableModel$DetailsColumn.Details" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="docking.ErrLogDialog$ErrEntryTableModel$TimestampColumn.Time" WIDTH="15" VISIBLE="true" />
+                        <TABLE_SORT_STATE>
+                            <COLUMN_SORT_STATE COLUMN_MODEL_INDEX="0" SORT_DIRECTION="ascending" SORT_ORDER="1" />
                         </TABLE_SORT_STATE>
                     </Table_State>
                 </XML>
@@ -1399,9 +1635,9 @@
             <PREFERENCE_STATE NAME="ghidra.framework.plugintool.dialog.KeyBindingsPanel$KeyBindingsTableModel:Action Name:KeyBinding:Plugin Name:">
                 <XML NAME="COLUMN_DATA">
                     <Table_State>
-                        <COLUMN NAME="Action Name" WIDTH="219" VISIBLE="true" />
-                        <COLUMN NAME="KeyBinding" WIDTH="257" VISIBLE="true" />
-                        <COLUMN NAME="Plugin Name" WIDTH="257" VISIBLE="true" />
+                        <COLUMN NAME="Action Name" WIDTH="222" VISIBLE="true" />
+                        <COLUMN NAME="KeyBinding" WIDTH="259" VISIBLE="true" />
+                        <COLUMN NAME="Plugin Name" WIDTH="258" VISIBLE="true" />
                         <TABLE_SORT_STATE>
                             <COLUMN_SORT_STATE COLUMN_MODEL_INDEX="1" SORT_DIRECTION="descending" SORT_ORDER="1" />
                         </TABLE_SORT_STATE>
