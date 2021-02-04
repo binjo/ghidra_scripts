@@ -186,7 +186,7 @@
     </WRAPPED_OPTION>
     <WRAPPED_OPTION NAME="Close File (ProgramManagerPlugin)" CLASS="ghidra.framework.options.WrappedKeyStroke">
         <STATE NAME="KeyCode" TYPE="int" VALUE="87" />
-        <STATE NAME="Modifiers" TYPE="int" VALUE="260" />
+        <STATE NAME="Modifiers" TYPE="int" VALUE="130" />
     </WRAPPED_OPTION>
     <WRAPPED_OPTION NAME="Next Bookmark (NextPrevCodeUnitPlugin)" CLASS="ghidra.framework.options.WrappedKeyStroke">
         <STATE NAME="KeyCode" TYPE="int" VALUE="66" />
