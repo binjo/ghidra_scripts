@@ -552,6 +552,10 @@
         <STATE NAME="KeyCode" TYPE="int" VALUE="76" />
         <STATE NAME="Modifiers" TYPE="int" VALUE="0" />
     </WRAPPED_OPTION>
+    <WRAPPED_OPTION NAME="Close Tool (Tool)" CLASS="ghidra.framework.options.WrappedKeyStroke">
+        <STATE NAME="KeyCode" TYPE="int" VALUE="88" />
+        <STATE NAME="Modifiers" TYPE="int" VALUE="130" />
+    </WRAPPED_OPTION>
     <WRAPPED_OPTION NAME="Next Different Byte Value (NextPrevCodeUnitPlugin)" CLASS="ghidra.framework.options.WrappedKeyStroke">
         <STATE NAME="KeyCode" TYPE="int" VALUE="86" />
         <STATE NAME="Modifiers" TYPE="int" VALUE="780" />
