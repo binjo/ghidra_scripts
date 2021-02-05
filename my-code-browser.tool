@@ -578,7 +578,7 @@
                 <A VALUE="false" />
                 <A VALUE="false" />
             </ARRAY>
-            <STATE NAME="DEFAULT_FONT_NAME" TYPE="string" VALUE="monospaced" />
+            <STATE NAME="DEFAULT_FONT_NAME" TYPE="string" VALUE="Source Code Pro" />
             <ARRAY NAME="BundleHost_SYSTEM" TYPE="boolean">
                 <A VALUE="true" />
                 <A VALUE="true" />
